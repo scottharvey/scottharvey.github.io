@@ -9,7 +9,7 @@
   <title>Packing for a bicycle tour</title>
   <meta name='description' content='What to take and what to leave at home? In this post I’ll go over everything I’ve currently got packed on my bike while I’m touring around Europe. '>
 
-  <link rel="canonical" href="http://localhost:4000/blog/packing-for-a-bicycle-tour">
+    <link rel="canonical" href="https://www.scottharvey.co/blog/packing-for-a-bicycle-tour">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -338,6 +338,53 @@
 </div>
 <!-- end post -->
 
+
+  <!-- begin comments -->
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+      <div class="disqus-inner">
+        <div id="disqus_thread" class="post__comments">
+          <div id="disqus_empty"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function load_disqus() {
+    var disqus_shortname = 'gazingskyward',
+      is_disqus_empty = document.getElementById('disqus_empty'),
+      disqus_target = document.getElementById('disqus_thread'),
+      disqus_embed = document.createElement('script'),
+      disqus_hook = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+
+    if (disqus_target && is_disqus_empty) {
+      disqus_embed.type = 'text/javascript';
+      disqus_embed.async = true;
+      disqus_embed.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      disqus_hook.appendChild(disqus_embed);
+      is_disqus_empty.remove();
+    }
+  }
+
+  window.addEventListener('scroll', function (e) {
+    var currentScroll = document.scrollingElement.scrollTop;
+    var disqus_target = document.getElementById('disqus_thread');
+
+    if (disqus_target && (currentScroll > disqus_target.getBoundingClientRect().top - 150)) {
+      load_disqus('disqus_shortname');
+    }
+  }, false);
+
+</script>
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<!-- end comments -->
+
+
 <div class="container">
   <div class="row">
     <div class="col col-10 col-d-12 push-d-0 push-1">
@@ -567,9 +614,6 @@
   </section>
 </div>
 <!-- end related posts -->
-
-
-
 
 
 
